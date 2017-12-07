@@ -1,4 +1,4 @@
-Device configuration for the Samsung Galaxy J7 2016 (j7xelte)
+Device configuration for the Samsung Galaxy J7 NXT (j7velte)
 
 Copyright (C) 2017 The LineageOS Project
 Copyright (C) 2017 Valera Chigir <valera1978@tut.by>

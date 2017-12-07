@@ -16,7 +16,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-LOCAL_PATH := device/samsung/j7xelte
+LOCAL_PATH := device/samsung/j7velte
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -182,4 +182,4 @@ $(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
 $(call inherit-product, hardware/samsung_slsi-cm/exynos7870/exynos7870.mk)
 
 # call the proprietary setup
-$(call inherit-product, vendor/samsung/j7xelte/j7xelte-vendor.mk)
+$(call inherit-product, vendor/samsung/j7velte/j7velte-vendor.mk)

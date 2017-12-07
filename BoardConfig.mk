@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/j7xelte
+LOCAL_PATH := device/samsung/j7velte
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -23,7 +23,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-BLOCK_BASED_OTA:= false
+BLOCK_BASED_OTA:= true
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
@@ -63,8 +63,8 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aa
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 # Kernel config
-TARGET_KERNEL_SOURCE := kernel/samsung/j7xelte
-TARGET_KERNEL_CONFIG := lineage_j7xelte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/j7velte
+TARGET_KERNEL_CONFIG := lineage_j7velte_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 
 # Partitions
@@ -160,7 +160,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.samsungexynos7870
-TARGET_OTA_ASSERT_DEVICE := j7xelte
+TARGET_OTA_ASSERT_DEVICE := j7velte
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
