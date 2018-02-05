@@ -30,7 +30,6 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
-BOARD_KERNEL_CMDLINE := # Exynos doesn't take cmdline arguments from boot image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 # 000RU = recovery kernel, 000KU = system kernel
@@ -42,16 +41,15 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 0x0BB800000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x2CF3FB000 # 0x2CF400000 - 20480 (footer)
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 0x00C800000
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-TARGET_PREBUILT_KERNEL := device/samsung/j7xelte/Image
-TARGET_PREBUILT_DTB := device/samsung/j7xelte/dtb.img
+TARGET_KERNEL_SOURCE := kernel/samsung/j7velte
+TARGET_KERNEL_CONFIG := lineage_j7velte_defconfig
 
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j7xelte/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j7velte/bootimg.mk
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -81,6 +79,6 @@ TW_INCLUDE_CRYPTO := true
 
 # Init properties from bootloader version, ex. model info
 TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_j7xelte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_j7xelte
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/j7xelte/init/init_j7xelte.cpp
+TARGET_INIT_VENDOR_LIB := libinit_j7velte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_j7velte
+TARGET_LIBINIT_DEFINES_FILE := device/samsung/j7velte/init/init_j7velte.cpp

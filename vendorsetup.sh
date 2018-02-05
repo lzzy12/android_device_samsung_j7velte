@@ -1,1 +1,1 @@
-add_lunch_combo omni_j7xelte-eng
+add_lunch_combo lineage_j7velte-userdebug
