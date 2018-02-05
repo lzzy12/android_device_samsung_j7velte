@@ -42,14 +42,14 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x2CF3FB000 # 0x2CF400000 - 20480 (footer)
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 0x00C800000
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_KERNEL_SOURCE := kernel/samsung/j7velte
-TARGET_KERNEL_CONFIG := lineage_j7velte_defconfig
+TARGET_KERNEL_CONFIG := lineage-j7velte_defconfig
 
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/j7velte/bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -64,6 +64,9 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_NO_EXFAT_FUSE := true
 TW_MTP_DEVICE := "/dev/mtp_usb"
 TW_EXCLUDE_SUPERSU := true
+
+# arget specific Includes
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/j7velte/include
 
 # Color fix
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
